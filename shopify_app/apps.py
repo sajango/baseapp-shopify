@@ -16,8 +16,8 @@ class ShopifyAppConfig(AppConfig):
     #
     # You can ignore this file in git using the following command:
     #   git update-index --assume-unchanged shopify_settings.py
-    SHOPIFY_API_KEY = os.environ.get('SHOPIFY_API_KEY', '211929f431e2a5d1578fb14b25171cac')
-    SHOPIFY_API_SECRET = os.environ.get('SHOPIFY_API_SECRET', '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')
+    SHOPIFY_API_KEY = os.environ.get('SHOPIFY_API_KEY')
+    SHOPIFY_API_SECRET = os.environ.get('SHOPIFY_API_SECRET')
 
     # API_VERSION specifies which api version that the app will communicate with
     SHOPIFY_API_VERSION = os.environ.get('SHOPIFY_API_VERSION', 'unstable')

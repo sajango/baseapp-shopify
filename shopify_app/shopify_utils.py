@@ -30,3 +30,9 @@ def get_orders(limit, after, status):
 
 def get_order_by_id(order_id):
     pass
+
+
+def create_shop_metafields():
+    r = shopify.Metafield.find(
+    )
+    return r
