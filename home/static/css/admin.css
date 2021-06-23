@@ -1,0 +1,810 @@
+@media (min-width: 1600px) {
+  .uk-grid-0-xl {
+    margin-left: -0px;
+  }
+  .uk-grid-0-xl > * {
+    padding-left: 0px;
+  }
+  .uk-grid-0-xl > .uk-grid-margin {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-0-l {
+    margin-left: -0px;
+  }
+  .uk-grid-0-l > * {
+    padding-left: 0px;
+  }
+  .uk-grid-0-l > .uk-grid-margin {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-0-m {
+    margin-left: -0px;
+  }
+  .uk-grid-0-m > * {
+    padding-left: 0px;
+  }
+  .uk-grid-0-m > .uk-grid-margin {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-0-s {
+    margin-left: -0px;
+  }
+  .uk-grid-0-s > * {
+    padding-left: 0px;
+  }
+  .uk-grid-0-s > .uk-grid-margin {
+    margin-top: 0px;
+  }
+}
+
+.uk-grid-0 {
+  margin-left: -0px;
+}
+.uk-grid-0 > * {
+  padding-left: 0px;
+}
+.uk-grid-0 > .uk-grid-margin {
+  margin-top: 0px;
+}
+
+@media (min-width: 1600px) {
+  .uk-grid-5-xl {
+    margin-left: -5px;
+  }
+  .uk-grid-5-xl > * {
+    padding-left: 5px;
+  }
+  .uk-grid-5-xl > .uk-grid-margin {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-5-l {
+    margin-left: -5px;
+  }
+  .uk-grid-5-l > * {
+    padding-left: 5px;
+  }
+  .uk-grid-5-l > .uk-grid-margin {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-5-m {
+    margin-left: -5px;
+  }
+  .uk-grid-5-m > * {
+    padding-left: 5px;
+  }
+  .uk-grid-5-m > .uk-grid-margin {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-5-s {
+    margin-left: -5px;
+  }
+  .uk-grid-5-s > * {
+    padding-left: 5px;
+  }
+  .uk-grid-5-s > .uk-grid-margin {
+    margin-top: 5px;
+  }
+}
+
+.uk-grid-5 {
+  margin-left: -5px;
+}
+.uk-grid-5 > * {
+  padding-left: 5px;
+}
+.uk-grid-5 > .uk-grid-margin {
+  margin-top: 5px;
+}
+
+@media (min-width: 1600px) {
+  .uk-grid-8-xl {
+    margin-left: -8px;
+  }
+  .uk-grid-8-xl > * {
+    padding-left: 8px;
+  }
+  .uk-grid-8-xl > .uk-grid-margin {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-8-l {
+    margin-left: -8px;
+  }
+  .uk-grid-8-l > * {
+    padding-left: 8px;
+  }
+  .uk-grid-8-l > .uk-grid-margin {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-8-m {
+    margin-left: -8px;
+  }
+  .uk-grid-8-m > * {
+    padding-left: 8px;
+  }
+  .uk-grid-8-m > .uk-grid-margin {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-8-s {
+    margin-left: -8px;
+  }
+  .uk-grid-8-s > * {
+    padding-left: 8px;
+  }
+  .uk-grid-8-s > .uk-grid-margin {
+    margin-top: 8px;
+  }
+}
+
+.uk-grid-8 {
+  margin-left: -8px;
+}
+.uk-grid-8 > * {
+  padding-left: 8px;
+}
+.uk-grid-8 > .uk-grid-margin {
+  margin-top: 8px;
+}
+
+@media (min-width: 1600px) {
+  .uk-grid-13-xl {
+    margin-left: -13px;
+  }
+  .uk-grid-13-xl > * {
+    padding-left: 13px;
+  }
+  .uk-grid-13-xl > .uk-grid-margin {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-13-l {
+    margin-left: -13px;
+  }
+  .uk-grid-13-l > * {
+    padding-left: 13px;
+  }
+  .uk-grid-13-l > .uk-grid-margin {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-13-m {
+    margin-left: -13px;
+  }
+  .uk-grid-13-m > * {
+    padding-left: 13px;
+  }
+  .uk-grid-13-m > .uk-grid-margin {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-13-s {
+    margin-left: -13px;
+  }
+  .uk-grid-13-s > * {
+    padding-left: 13px;
+  }
+  .uk-grid-13-s > .uk-grid-margin {
+    margin-top: 13px;
+  }
+}
+
+.uk-grid-13 {
+  margin-left: -13px;
+}
+.uk-grid-13 > * {
+  padding-left: 13px;
+}
+.uk-grid-13 > .uk-grid-margin {
+  margin-top: 13px;
+}
+
+@media (min-width: 1600px) {
+  .uk-grid-16-xl {
+    margin-left: -16px;
+  }
+  .uk-grid-16-xl > * {
+    padding-left: 16px;
+  }
+  .uk-grid-16-xl > .uk-grid-margin {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-16-l {
+    margin-left: -16px;
+  }
+  .uk-grid-16-l > * {
+    padding-left: 16px;
+  }
+  .uk-grid-16-l > .uk-grid-margin {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-16-m {
+    margin-left: -16px;
+  }
+  .uk-grid-16-m > * {
+    padding-left: 16px;
+  }
+  .uk-grid-16-m > .uk-grid-margin {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-16-s {
+    margin-left: -16px;
+  }
+  .uk-grid-16-s > * {
+    padding-left: 16px;
+  }
+  .uk-grid-16-s > .uk-grid-margin {
+    margin-top: 16px;
+  }
+}
+
+.uk-grid-16 {
+  margin-left: -16px;
+}
+.uk-grid-16 > * {
+  padding-left: 16px;
+}
+.uk-grid-16 > .uk-grid-margin {
+  margin-top: 16px;
+}
+
+@media (min-width: 1600px) {
+  .uk-grid-20-xl {
+    margin-left: -20px;
+  }
+  .uk-grid-20-xl > * {
+    padding-left: 20px;
+  }
+  .uk-grid-20-xl > .uk-grid-margin {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-20-l {
+    margin-left: -20px;
+  }
+  .uk-grid-20-l > * {
+    padding-left: 20px;
+  }
+  .uk-grid-20-l > .uk-grid-margin {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-20-m {
+    margin-left: -20px;
+  }
+  .uk-grid-20-m > * {
+    padding-left: 20px;
+  }
+  .uk-grid-20-m > .uk-grid-margin {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-20-s {
+    margin-left: -20px;
+  }
+  .uk-grid-20-s > * {
+    padding-left: 20px;
+  }
+  .uk-grid-20-s > .uk-grid-margin {
+    margin-top: 20px;
+  }
+}
+
+.uk-grid-20 {
+  margin-left: -20px;
+}
+.uk-grid-20 > * {
+  padding-left: 20px;
+}
+.uk-grid-20 > .uk-grid-margin {
+  margin-top: 20px;
+}
+
+@media (min-width: 1600px) {
+  .uk-grid-26-xl {
+    margin-left: -26px;
+  }
+  .uk-grid-26-xl > * {
+    padding-left: 26px;
+  }
+  .uk-grid-26-xl > .uk-grid-margin {
+    margin-top: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uk-grid-26-l {
+    margin-left: -26px;
+  }
+  .uk-grid-26-l > * {
+    padding-left: 26px;
+  }
+  .uk-grid-26-l > .uk-grid-margin {
+    margin-top: 26px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-grid-26-m {
+    margin-left: -26px;
+  }
+  .uk-grid-26-m > * {
+    padding-left: 26px;
+  }
+  .uk-grid-26-m > .uk-grid-margin {
+    margin-top: 26px;
+  }
+}
+
+@media (min-width: 640px) {
+  .uk-grid-26-s {
+    margin-left: -26px;
+  }
+  .uk-grid-26-s > * {
+    padding-left: 26px;
+  }
+  .uk-grid-26-s > .uk-grid-margin {
+    margin-top: 26px;
+  }
+}
+
+.uk-grid-26 {
+  margin-left: -26px;
+}
+.uk-grid-26 > * {
+  padding-left: 26px;
+}
+.uk-grid-26 > .uk-grid-margin {
+  margin-top: 26px;
+}
+
+body {
+  font-family: "Avenir Next Rounded";
+  font-weight: 400;
+  font-style: normal;
+}
+
+/**
+ * --------------------------------------------------------------------
+ * Avenir Next Rounded Pro
+ * --------------------------------------------------------------------
+ */
+@font-face {
+  font-family: "Avenir Next Rounded Pro Regular";
+  font-display: auto;
+  src: local("Avenir Next Rounded Pro Regular"), url("../fonts/AvenirNextRoundedPro/AvenirNextRoundedProRegular.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+ * --------------------------------------------------------------------
+ * Roboto
+ * --------------------------------------------------------------------
+ */
+@font-face {
+  font-family: "Roboto Bold";
+  font-display: auto;
+  src: local("Roboto Bold"), url("../fonts/Roboto/Roboto-Bold_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Black";
+  font-display: auto;
+  src: local("Roboto Black"), url("../fonts/Roboto/Roboto-Black_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Medium";
+  font-display: auto;
+  src: local("Roboto Medium"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Regular";
+  font-display: auto;
+  src: local("Roboto Regular"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+ * --------------------------------------------------------------------
+ * Avenir Next Rounded
+ * --------------------------------------------------------------------
+ */
+@font-face {
+  font-family: "Avenir Next Rounded";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n4.bf9f8a9255b73d6855898a92a71e46e66762cb01.woff2?&hmac=a01c237d2ccd661371457abd35001a0ca7dd92f7c4b5ac3464527f1e75145ba7") format("woff2"), url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n4.df1527689b7a5f1bae5e07a883e90d1f4bbcfce9.woff?&hmac=8fd58a37c0bf1769e310f6f90a4297cb6ffde795bcdaaf8da20d7c260703bfce") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next Rounded";
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_i4.6c93d51d8935dafd28b0f9a33ada906d522c75cf.woff2?&hmac=dfdcbf021e584c7ed3c9cd31da0117eec05baf7f05d4c12c57cc3675c6316496") format("woff2"), url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_i4.269978c3cab923c2b694dc6f23ae04497ccf5f65.woff?&hmac=9e6650a5700c5244cdb7dda9bc38ee2663400c77d8efd9fdbe45a24a0d926820") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next Rounded";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n6.70a246a3b04e622acd4f5099fe7d696f711baff4.woff2?&hmac=aeb114767c644287a860a752a0a4121c7a70b1c218d5928408b4c358b0c01d81") format("woff2"), url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n6.19150390dd803328b11894fb19904ee50bf0bf9e.woff?&hmac=5ce840855f33730898f06826c86737eb8e4eb125bd3e2907f507775124a561aa") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/avenir_next/avenirnext_n6.08f6a09127d450aa39c74986de08fd8fa84e6a11.woff2?&hmac=4b76bcbc3ee700fcda9deee2aacb75dc294a35c622d76b328e479eee68110caa") format("woff2"), url("https://fonts.shopifycdn.com/avenir_next/avenirnext_n6.bd2f76897d6f40c767db7c40226916ec7b6ffc65.woff?&hmac=9c73881331781824693ea4b61f1dbd50ac6ac9fe4e90f55bb1e1ddd3bf97635e") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next Rounded";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n7.6cb798f800a36b5f1a6b8b8a75580d4364fdb0a0.woff2?&hmac=e97ea6dd703ceef4e172adaeb236e97fd63a5fa0528df1b9ce4e05c7efb55f98") format("woff2"), url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n7.24cdea35e481e1d764eb230e7fad24db6fa031d2.woff?&hmac=d34d8758090281c75bc3313cd1e054b226dc91ec4bcf19ff1670885342a064db") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next Rounded";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_i7.a91f884a85eb2a05d1716a37ab63ebab9c966032.woff2?&hmac=cc3654c48dc5e483c470094fa860209b0590f0ed78f1a80ec5e0855ce0f6b8e4") format("woff2"), url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_i7.1a45605c53c4364439c320111e585a7d61e7bebf.woff?&hmac=8d95d1466073d61ee3dff33fa016a533c8647a95d15de250ce9c2cd2bb53353b") format("woff");
+}
+/**
+ * --------------------------------------------------------------------
+ * Avenir Next Rounded
+ * --------------------------------------------------------------------
+ */
+.admin__box {
+  padding: 32px 30px 60px 32px;
+}
+.admin__title {
+  color: #212b36;
+  font-size: 33px;
+  line-height: 1.33;
+  font-family: "Avenir Next Rounded";
+  font-weight: 600;
+  font-style: normal;
+}
+.admin__box1 {
+  border-radius: 3px;
+  border: solid 1px #dfe3e8;
+}
+.admin__box1__txt {
+  font-size: 16px;
+  color: #212b36;
+  line-height: 1.31;
+  font-family: "Roboto Regular", sans-serif;
+}
+.admin__box1__tr:nth-child(2n+1) td:first-child .admin__box1__txt {
+  color: #006fbb;
+}
+.admin__box1__tr:nth-child(2n) .admin__box1__txt {
+  color: #637381;
+}
+.admin__box1__tr td:first-child .admin__box1__txt {
+  font-family: "Roboto Medium", sans-serif;
+}
+.admin__box1__header .admin__box1__txt {
+  font-family: "Avenir Next Rounded";
+  font-weight: 600;
+  font-style: normal;
+  color: #212b36;
+}
+.admin__box1__item:nth-child(n+2) {
+  margin-top: 10px;
+}
+.admin__box1__tr td {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.admin__box1__item1 {
+  line-height: 1;
+}
+.admin__box1__item1:nth-child(n+2) {
+  margin-top: 12px;
+}
+.admin__box1__tag {
+  padding-left: 10px;
+  padding-right: 13px;
+}
+.admin__box1__tag .uk-grid > div {
+  line-height: 1.1;
+}
+.uk-active > .admin__box1__tag {
+  background-color: #c4cdd5;
+}
+.pending > .admin__box1__tag {
+  background-color: #ffea8a;
+}
+.admin__box1__tag__dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.uk-active .admin__box1__tag__dot {
+  background-color: #919eab;
+}
+.pending .admin__box1__tag__dot {
+  background-color: transparent;
+  border: solid 2px #8a6116;
+}
+.admin__box1__tag__txt {
+  font-size: 12px;
+  line-height: 1.36;
+  letter-spacing: 0.7px;
+  color: #454f5b;
+}
+.pending .admin__box1__tag__txt {
+  color: #595130;
+}
+.admin__box2 {
+  padding: 16px;
+}
+.admin__box2__icon1 svg {
+  display: none;
+}
+.admin__box2__btn {
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  line-height: 32px !important;
+  height: 32px !important;
+  border: solid 1px #c4cdd5 !important;
+  background-image: linear-gradient(to bottom, #ffffff, #f9fafb) !important;
+}
+.admin__box2__btn::placeholder {
+  color: #919eab;
+}
+.admin__box2__item:nth-child(n+2) .admin__box2__btn {
+  margin-left: -1px;
+}
+.search .admin__box2__btn {
+  padding-left: 33px !important;
+  border-radius: 2px 0 0 2px;
+}
+.dropdown .admin__box2__btn {
+  padding-left: 16px;
+}
+.dropdown .admin__box2__btn .uk-icon {
+  right: 5px;
+}
+.sort .admin__box2__btn {
+  padding-left: 45px;
+  border-radius: 0 2px 2px 0;
+}
+.sort .admin__box2__btn .uk-icon {
+  left: 17px;
+}
+.admin__box2__dropdown {
+  border-radius: 3px;
+  box-shadow: 0 2px 16px 0 rgba(33, 43, 54, 0.08);
+  border: solid 1px #dfe3e8;
+  background-color: #ffffff;
+  padding: 13px 16px;
+  min-width: -webkit-max-content;
+  min-width: max-content;
+}
+.admin__box2__radio:checked {
+  background-image: url("../images/admin/Oval-6.png");
+  background-color: #ffffff;
+  border-color: #5c6ac4;
+}
+.admin__box2__radio:checked:focus {
+  background-color: #ffffff;
+  border-color: #5c6ac4;
+}
+.admin__box2__radio:focus {
+  background-color: #ffffff;
+  border-color: #5c6ac4;
+}
+.admin__box2__item1:nth-child(n+2) {
+  margin-top: 3px;
+}
+.admin__box2__txt {
+  font-size: 14px;
+  line-height: 1.14;
+  color: #212b36;
+}
+.admin__box2__txt1 {
+  line-height: 1.29;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  color: #637381;
+  margin-bottom: 12px;
+}
+
+/**
+ * --------------------------------------------------------------------
+ * Avenir Next Rounded
+ * --------------------------------------------------------------------
+ */
+.admin2__bg {
+  background-color: #f4f6f8;
+}
+.admin2__bg:nth-child(n+2) {
+  margin-top: 20px;
+}
+.admin2__box {
+  padding: 15px;
+}
+@media (min-width: 960px) {
+  .admin2__box {
+    padding: 30px 84px;
+  }
+}
+.admin2__box__txt1 {
+  font-size: 14px;
+  line-height: 1.36;
+  color: #637381;
+  margin-bottom: 6px;
+}
+.admin2__box__txt1 a {
+  color: #637381;
+}
+.admin2__box__txt2 {
+  margin-bottom: 24px;
+}
+.admin2__box__txt2__c1 {
+  font-size: 28px;
+  line-height: 1.32;
+  color: #212b36;
+}
+.admin2__box__txt2__c2 {
+  font-size: 14px;
+  line-height: 1.36;
+  color: #212b36;
+}
+.admin2__box1 {
+  padding: 34px 14.5px 20px 20px;
+}
+.admin2__box1__title1 {
+  font-size: 14px;
+  line-height: 1.29;
+}
+.admin2__box1__title1 a {
+  color: #006fbb;
+}
+.admin2__box1__txt1 {
+  font-size: 14px;
+  line-height: 1.36;
+  color: #212b36;
+}
+.admin2__box1__txt2 {
+  font-size: 14px;
+  line-height: 1.29;
+  color: #637381;
+}
+.admin2__box2 {
+  padding: 15px 0;
+  border-top: solid 1px #dfe3e8;
+  border-bottom: solid 1px #dfe3e8;
+  margin-bottom: 16px;
+}
+.admin2__box4__txt1 {
+  font-size: 16px;
+  line-height: 1.31;
+  letter-spacing: 0.8px;
+  color: #000000;
+  font-family: "Avenir Next Rounded";
+  font-weight: 600;
+  font-style: normal;
+}
+.admin2__box4__txt2 {
+  font-size: 14px;
+  line-height: 1.36;
+  color: #006fbb;
+}
+.admin2__box4__margin1 {
+  margin-bottom: 15px;
+}
+.admin2__box5__txt1 {
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.7px;
+  color: #006fbb;
+}
+.admin2__box5__txt1 a {
+  color: #006fbb;
+}
+.admin2__box7:nth-child(n+2) {
+  border-top: solid 1px #dfe3e8;
+}
+.admin2__box7__txt1 {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.6px;
+  color: #212b36;
+}
+.admin2__box7__txt2 {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: 0.7px;
+  color: #212b36;
+}
+.admin2__box7__margin1 {
+  margin-bottom: 4px;
+}
+.admin2__box7__margin2 {
+  margin-bottom: 17px;
+}
+@media (min-width: 960px) {
+  .admin2__dc2, .admin2__box5 {
+    max-width: 273px;
+    width: 100%;
+  }
+}
+.admin2__dc3, .admin2__box4, .admin2__box7 {
+  padding: 20px;
+}
+.admin2__dc1, .admin2__box1, .admin2__box4, .admin2__box6 {
+  border-radius: 3px;
+  border: solid 1px #dfe3e8;
+}
+
+/**
+ * --------------------------------------------------------------------
+ * Avenir Next Rounded
+ * --------------------------------------------------------------------
+ */
+.page1__contentRight {
+  padding: 20px 0;
+  border-top: solid 1px #dfe3e8;
+}
+.page1__contentRight__btn1 {
+  border: solid 1px #919eab;
+  background-color: #f4f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 36px;
+  width: 36px !important;
+}
+/*# sourceMappingURL=admin.css.map */

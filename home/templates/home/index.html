@@ -1,45 +1,220 @@
-{% extends "base.html" %}
-{% block content %}
-  <div id="orders">
-    <h2>Your recent orders</h2>
-    {% if orders %}
-      <ul>
-      {% for order in orders %}
-        <li>
-          <div class="order box">
-            <div class="wrapper">
-              <strong><a href="https://{{ current_shop.domain }}/admin/orders/{{ order.id }}">{{ order.name }}</a></strong>
-              <span class="price">{{ order.total_price }} {{ order.currency }}</span>
-              <span class="highlight">{{ order.financial_status }}</span>
-              by <span class="note">{{ order.billing_address.name }}</span>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <script src="/__prepros.js"></script>
+    <meta charset="UTF-8">
+    <title>Mizuno - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/uikit-3.5.8/css/uikit.min.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer_plus.min.js"></script>
+    <script src="/static/assets/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/assets/uikit-3.5.8/js/uikit.min.js"></script>
+    <script src="/static/assets/uikit-3.5.8/js/uikit-icons.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</head>
+<body>
+<div id="app" class="uk-offcanvas-content uk-overflow-hidden">
+    <div class="admin__box admin2__bg uk-height-viewport">
+        <div class="admin__title uk-margin-bottom">試着ユーザー一覧</div>
+        <div class="uk-background-default admin__box1">
+            <div class="admin__box2">
+                <div class="uk-child-width-auto uk-grid-collapse" uk-grid>
+                    <div class="admin__box2__item search">
+                        <form class="uk-search uk-search-default uk-width-medium">
+                            <span class="admin__box2__icon1" uk-search-icon>
+                                <img src="/static/images/admin/search.png" alt="">
+                            </span>
+                            <input class="admin__box2__btn uk-search-input" type="search" placeholder="注文を絞り込む">
+                        </form>
+                    </div>
+                    <div class="admin__box2__item dropdown">
+                        <div class="uk-inline">
+                            <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                <span>商品ステータス</span>
+                                <span class="uk-position-center-right admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="/static/images/admin/Polaris-icon-Minor-Mono-Dropdown.png" alt="">
+                                </span>
+                            </button>
+                            <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">試着中</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">返品予定</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">購入済み</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">返却済み</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin__box2__item sort">
+                        <div class="uk-inline">
+                            <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                <span>並び替え</span>
+                                <span class="uk-position-center-left admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="/static/images/admin/Polaris-icon-Minor-Mono-Share-iOS.png" alt="">
+                                </span>
+                            </button>
+                            <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                <div class="admin__box2__txt1">並び替え</div>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">試着注文番号(昇順)</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">試着注文番号(降順)</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">試着日付(昇順)</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">試着日付(降順)</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">お客様の名前(A~Z)</span>
+                                    </div>
+                                </label>
+                                <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <span class="admin__box2__txt uk-text-truncate">お客様の名前(Z~A)</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </li>
-      {% endfor %}
-      </ul>
-    {% else %}
-      <em class="note">There are no orders in your store.</em>
-    {% endif %}
-  </div>
-
-  <h2>Some of your products</h2>
-  {% for product in products %}
-    <div class="product box">
-      <div class="wrapper">
-        {% if product.images %}
-          <img src="{{ product.images.0.small }}" />
-        {% endif %}
-
-        <h4><a href="https://{{ current_shop.domain }}/admin/products/{{ product.id }}">{{ product.title }}</a></h4>
-
-        <p class="price">{{ product.price_range }} {{ current_shop.currency }}</p>
-        <p style="margin-bottom: 0">{{ product.product_type }} <span class="note">type</span></p>
-        <p style="margin: 0">{{ product.vendor }} <span class="note">vendor</span></p>
-
-        <div style="clear:left"></div>
-      </div>
+            <table class="uk-table uk-table-divider uk-table-middle uk-margin-remove">
+                <thead>
+                <tr class="admin__box1__header">
+                    <th><span class="admin__box1__txt">試着注文</span></th>
+                    <th><span class="admin__box1__txt">名前</span></th>
+                    <th><span class="admin__box1__txt">試着中商品</span></th>
+                    <th><span class="admin__box1__txt">ステータス</span></th>
+                    <th><span class="admin__box1__txt">試着日付</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="admin__box1__tr">
+                    <td><span class="admin__box1__txt">#0011</span></td>
+                    <td><span class="admin__box1__txt">山田太郎</span></td>
+                    <td>
+                        <div class="admin__box1__txt admin__box1__item"><span>【BuLuKa（ブルカ）】</span>アレンジバケットハット（４WAYHAT）00024 81-330…</div>
+                        <div class="admin__box1__txt admin__box1__item"><span>【BuLuKa（ブルカ）】</span>アレンジバケットハット（４WAYHAT）00024 81-330…</div>
+                        <div class="admin__box1__txt admin__box1__item"><span>【BuLuKa（ブルカ）】</span>アレンジバケットハット（４WAYHAT）00024 81-330…</div>
+                        <div class="admin__box1__txt admin__box1__item"><span>【BuLuKa（ブルカ）】</span>アレンジバケットハット（４WAYHAT）00024 81-330…</div>
+                        <div class="admin__box1__txt admin__box1__item"><span>【BuLuKa（ブルカ）】</span>アレンジバケットハット（４WAYHAT）00024 81-330…</div>
+                    </td>
+                    <td>
+                        <div class="admin__box1__item1 uk-active">
+                            <div class="uk-display-inline-block uk-border-pill admin__box1__tag">
+                                <div class="uk-grid-5 uk-child-width-auto" uk-grid>
+                                    <div><span class="admin__box1__tag__dot uk-border-circle"></span></div>
+                                    <div><span class="admin__box1__tag__txt">購入済み</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin__box1__item1 uk-active">
+                            <div class="uk-display-inline-block uk-border-pill admin__box1__tag">
+                                <div class="uk-grid-5 uk-child-width-auto" uk-grid>
+                                    <div><span class="admin__box1__tag__dot uk-border-circle"></span></div>
+                                    <div><span class="admin__box1__tag__txt">購入済み</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin__box1__item1 pending">
+                            <div class="uk-display-inline-block uk-border-pill admin__box1__tag">
+                                <div class="uk-grid-5 uk-child-width-auto" uk-grid>
+                                    <div><span class="admin__box1__tag__dot uk-border-circle"></span></div>
+                                    <div><span class="admin__box1__tag__txt">試着中</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin__box1__item1 pending">
+                            <div class="uk-display-inline-block uk-border-pill admin__box1__tag">
+                                <div class="uk-grid-5 uk-child-width-auto" uk-grid>
+                                    <div><span class="admin__box1__tag__dot uk-border-circle"></span></div>
+                                    <div><span class="admin__box1__tag__txt">返品予定</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin__box1__item1 uk-active">
+                            <div class="uk-display-inline-block uk-border-pill admin__box1__tag">
+                                <div class="uk-grid-5 uk-child-width-auto" uk-grid>
+                                    <div><span class="admin__box1__tag__dot uk-border-circle"></span></div>
+                                    <div><span class="admin__box1__tag__txt">購入済み</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="admin__box1__txt">2020.00.00</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="uk-flex uk-flex-center page1__contentRight">
+                <div class="uk-button-group uk-border-rounded">
+                    <button class="uk-button uk-button-default page1__contentRight__btn1"><img src="/static/images/icon_prev.png" alt=""></button>
+                    <button class="uk-button uk-button-default page1__contentRight__btn1"><img src="/static/images/icon_next.png" alt=""></button>
+                </div>
+            </div>
+        </div>
     </div>
-  {% empty %}
-    <em class="note">There are no products in your store.</em>
-  {% endfor %}
-{% endblock %}
+</div>
+</body>
+</html>

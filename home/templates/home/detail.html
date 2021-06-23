@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <script src="/__prepros.js"></script>
+    <meta charset="UTF-8">
+    <title>Mizuno - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/uikit-3.5.8/css/uikit.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer_plus.min.js"></script>
+    <script src="assets/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/uikit-3.5.8/js/uikit.min.js"></script>
+    <script src="assets/uikit-3.5.8/js/uikit-icons.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<div id="app" class="uk-offcanvas-content uk-overflow-hidden">
+    <div class="admin2__box admin2__bg">
+        <div class="admin2__box__txt1"><a href=""><img src="images/admin/backicon.png" alt=""> <span class="uk-text-middle">試着ユーザー一覧</span></a></div>
+        <div class="admin2__box__txt2">
+            <span class="admin2__box__txt2__c1">#0011</span>
+            <span class="admin2__box__txt2__c2">試着日付:2020年9月30日 21:35</span>
+        </div>
+        <div class="uk-grid-20" uk-grid>
+            <div class="uk-width-expand">
+                <div class="uk-grid-20" uk-grid>
+                    <div class="uk-width-1-1">
+                        <div class="admin2__box1 uk-background-default">
+                            <div class="uk-grid-16" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-cover-container">
+                                        <img src="images/admin/4e0fd7f925569acb4a5df967349f00f6@2x.png" alt="" uk-cover>
+                                        <canvas width="40" height="40"></canvas>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-grid-16 uk-margin-bottom" uk-grid>
+                                        <div class="uk-width-expand">
+                                            <h3 class="uk-h3 admin2__box1__title1"><a href="">【BuLuKa（ブルカ）】小ぶりキャスケット　81-8300　☆リンネル6月号掲載☆人気アイテム50選に選ばれました</a></h3>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900 x 1</span>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900</span>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box2">
+                                        <div class="uk-child-width-auto uk-grid-13" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">個数:</span>
+                                            </div>
+                                            <div><span class="admin2__box1__txt1">1</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box3">
+                                        <div class="uk-grid-26" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">ステータス:</span>
+                                            </div>
+                                            <div>
+                                                <div class="admin__box2__item dropdown">
+                                                    <div class="uk-inline">
+                                                        <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                                            <span>商品ステータス</span>
+                                                            <span class="uk-position-center-right admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="images/admin/Polaris-icon-Minor-Mono-Dropdown.png" alt="">
+                                </span>
+                                                        </button>
+                                                        <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">試着中</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返品予定</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">購入済み</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返却済み</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <div class="admin2__box1 uk-background-default">
+                            <div class="uk-grid-16" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-cover-container">
+                                        <img src="images/admin/4e0fd7f925569acb4a5df967349f00f6@2x.png" alt="" uk-cover>
+                                        <canvas width="40" height="40"></canvas>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-grid-16 uk-margin-bottom" uk-grid>
+                                        <div class="uk-width-expand">
+                                            <h3 class="uk-h3 admin2__box1__title1"><a href="">【BuLuKa（ブルカ）】小ぶりキャスケット　81-8300　☆リンネル6月号掲載☆人気アイテム50選に選ばれました</a></h3>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900 x 1</span>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900</span>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box2">
+                                        <div class="uk-child-width-auto uk-grid-13" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">個数:</span>
+                                            </div>
+                                            <div><span class="admin2__box1__txt1">1</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box3">
+                                        <div class="uk-grid-26" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">ステータス:</span>
+                                            </div>
+                                            <div>
+                                                <div class="admin__box2__item dropdown">
+                                                    <div class="uk-inline">
+                                                        <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                                            <span>商品ステータス</span>
+                                                            <span class="uk-position-center-right admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="images/admin/Polaris-icon-Minor-Mono-Dropdown.png" alt="">
+                                </span>
+                                                        </button>
+                                                        <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">試着中</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返品予定</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">購入済み</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返却済み</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <div class="admin2__box1 uk-background-default">
+                            <div class="uk-grid-16" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-cover-container">
+                                        <img src="images/admin/4e0fd7f925569acb4a5df967349f00f6@2x.png" alt="" uk-cover>
+                                        <canvas width="40" height="40"></canvas>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-grid-16 uk-margin-bottom" uk-grid>
+                                        <div class="uk-width-expand">
+                                            <h3 class="uk-h3 admin2__box1__title1"><a href="">【BuLuKa（ブルカ）】小ぶりキャスケット　81-8300　☆リンネル6月号掲載☆人気アイテム50選に選ばれました</a></h3>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900 x 1</span>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900</span>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box2">
+                                        <div class="uk-child-width-auto uk-grid-13" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">個数:</span>
+                                            </div>
+                                            <div><span class="admin2__box1__txt1">1</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box3">
+                                        <div class="uk-grid-26" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">ステータス:</span>
+                                            </div>
+                                            <div>
+                                                <div class="admin__box2__item dropdown">
+                                                    <div class="uk-inline">
+                                                        <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                                            <span>商品ステータス</span>
+                                                            <span class="uk-position-center-right admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="images/admin/Polaris-icon-Minor-Mono-Dropdown.png" alt="">
+                                </span>
+                                                        </button>
+                                                        <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">試着中</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返品予定</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">購入済み</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返却済み</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <div class="admin2__box1 uk-background-default">
+                            <div class="uk-grid-16" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-cover-container">
+                                        <img src="images/admin/4e0fd7f925569acb4a5df967349f00f6@2x.png" alt="" uk-cover>
+                                        <canvas width="40" height="40"></canvas>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-grid-16 uk-margin-bottom" uk-grid>
+                                        <div class="uk-width-expand">
+                                            <h3 class="uk-h3 admin2__box1__title1"><a href="">【BuLuKa（ブルカ）】小ぶりキャスケット　81-8300　☆リンネル6月号掲載☆人気アイテム50選に選ばれました</a></h3>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900 x 1</span>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900</span>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box2">
+                                        <div class="uk-child-width-auto uk-grid-13" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">個数:</span>
+                                            </div>
+                                            <div><span class="admin2__box1__txt1">1</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box3">
+                                        <div class="uk-grid-26" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">ステータス:</span>
+                                            </div>
+                                            <div>
+                                                <div class="admin__box2__item dropdown">
+                                                    <div class="uk-inline">
+                                                        <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                                            <span>商品ステータス</span>
+                                                            <span class="uk-position-center-right admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="images/admin/Polaris-icon-Minor-Mono-Dropdown.png" alt="">
+                                </span>
+                                                        </button>
+                                                        <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">試着中</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返品予定</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">購入済み</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返却済み</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <div class="admin2__box1 uk-background-default">
+                            <div class="uk-grid-16" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-cover-container">
+                                        <img src="images/admin/4e0fd7f925569acb4a5df967349f00f6@2x.png" alt="" uk-cover>
+                                        <canvas width="40" height="40"></canvas>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-grid-16 uk-margin-bottom" uk-grid>
+                                        <div class="uk-width-expand">
+                                            <h3 class="uk-h3 admin2__box1__title1"><a href="">【BuLuKa（ブルカ）】小ぶりキャスケット　81-8300　☆リンネル6月号掲載☆人気アイテム50選に選ばれました</a></h3>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900 x 1</span>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <span class="admin2__box1__txt1">¥9,900</span>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box2">
+                                        <div class="uk-child-width-auto uk-grid-13" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">個数:</span>
+                                            </div>
+                                            <div><span class="admin2__box1__txt1">1</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="admin2__box3">
+                                        <div class="uk-grid-26" uk-grid>
+                                            <div>
+                                                <span class="admin2__box1__txt2">ステータス:</span>
+                                            </div>
+                                            <div>
+                                                <div class="admin__box2__item dropdown">
+                                                    <div class="uk-inline">
+                                                        <button class="admin__box2__btn uk-button uk-button-default uk-position-relative" type="button">
+                                                            <span>商品ステータス</span>
+                                                            <span class="uk-position-center-right admin__box2__icon1" uk-icon="icon: chevron-down">
+                                    <img src="images/admin/Polaris-icon-Minor-Mono-Dropdown.png" alt="">
+                                </span>
+                                                        </button>
+                                                        <div class="admin__box2__dropdown" uk-dropdown="mode: click">
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" checked>
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">試着中</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返品予定</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">購入済み</span>
+                                                                </div>
+                                                            </label>
+                                                            <label class="admin__box2__item1 uk-grid-8" uk-grid>
+                                                                <div class="uk-width-auto">
+                                                                    <input class="uk-radio admin__box2__radio" type="radio" name="radio2" >
+                                                                </div>
+                                                                <div class="uk-width-expand">
+                                                                    <span class="admin__box2__txt uk-text-truncate">返却済み</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-auto@m admin2__box5">
+                <div class="uk-grid-20 uk-child-width-1-1@m" uk-grid>
+                    <div>
+                        <div class="admin2__box4 uk-background-default">
+                            <div class="admin2__box4__margin1" uk-grid>
+                                <div class="uk-width-expand">
+                                    <span class="admin2__box4__txt1">メモ</span>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <a class="admin2__box4__txt2" href="">編集</a>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="admin2__box1__txt2">お客様からのメモはありません</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="admin2__box6">
+                            <div class="admin2__box7 uk-background-default">
+                                <div class="admin2__box4__margin1" uk-grid>
+                                    <div class="uk-width-expand">
+                                        <span class="admin2__box4__txt1">お客様情報</span>
+                                    </div>
+                                    <div class="uk-width-auto">
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="admin2__box5__txt1">田中太郎</div>
+                                    <div class="admin2__box5__txt1">5注文数</div>
+                                </div>
+                            </div>
+                            <div class="admin2__box7 uk-background-default">
+                                <div class="admin2__box7__margin1" uk-grid>
+                                    <div class="uk-width-expand">
+                                        <span class="admin2__box7__txt1">連絡先情報</span>
+                                    </div>
+                                    <div class="uk-width-auto">
+                                        <a class="admin2__box4__txt2" href="">編集</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="admin2__box5__txt1">Tanakataro@taro.co.jp</div>
+                                    <div class="admin2__box5__txt1">080-1234-5678</div>
+                                </div>
+                            </div>
+                            <div class="admin2__box7 uk-background-default">
+                                <div class="admin2__box7__margin1" uk-grid>
+                                    <div class="uk-width-expand">
+                                        <span class="admin2__box7__txt1">配送先住所</span>
+                                    </div>
+                                    <div class="uk-width-auto">
+                                        <a class="admin2__box4__txt2" href="">編集</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="admin2__box7__txt2">
+                                        田中太郎 <br>
+                                        〒107-0052 <br>
+                                        東京都港区赤坂7丁目10−8　赤坂江戸清ビル4F
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin2__box7 uk-background-default">
+                                <div class="admin2__box7__margin1" uk-grid>
+                                    <div class="uk-width-expand">
+                                        <span class="admin2__box7__txt1">配送先住所</span>
+                                    </div>
+                                    <div class="uk-width-auto">
+
+                                    </div>
+                                </div>
+                                <div class="admin2__box7__margin2">
+                                    <div class="uk-grid-20" uk-grid>
+                                        <div class="uk-width-expand">
+                                            <div class="admin2__box7__txt2">
+                                                田中太郎 <br>
+                                                〒107-0052 <br>
+                                                東京都港区赤坂7丁目10−8　赤坂江戸清ビル4F
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <img src="images/admin/Polaris-icon-Minor-Mono-Clipboard.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="admin2__box5__txt1"><a href="">地図を表示する <img src="images/admin/link.png" alt=""></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
