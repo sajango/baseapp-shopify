@@ -11,7 +11,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 
 from home.models import LineItem, Order
-from home.serializers import OrderSerializer
+from home.serializers import LineItemSerializer
 from shopify_app.decorators import shop_login_required
 from shopify_app.models import ShopifyStore
 
@@ -22,7 +22,7 @@ api_version = apps.get_app_config('shopify_app').SHOPIFY_API_VERSION
 def orders(request):
     m_orders = Order.objects.prefetch_related('line_items').filter().order_by('-id')
     page = request.GET.get('page', 1)
-    paginator = Paginator(m_orders, 50)
+    paginator = Paginator(m_orders, 10)
     try:
         m_orders = paginator.page(page)
     except PageNotAnInteger:
@@ -44,10 +44,14 @@ def order_detail(request, order_id):
 
 
 def get_image(product, variant_id):
+    img_src = None
     images = product.images
     for img in images:
         if variant_id in img.variant_ids:
-            return img.src
+            img_src = img.src
+    if img_src is None:
+        img_src = images[0].src
+    return img_src
 
 
 @csrf_exempt
@@ -115,7 +119,7 @@ def check_try_on(request):
 
 
 class LineItems(generics.ListAPIView):
-    serializer_class = OrderSerializer
+    serializer_class = LineItemSerializer
 
     def list(self, request, *args, **kwargs):
         shop = request.GET.get('shop')
@@ -129,5 +133,5 @@ class LineItems(generics.ListAPIView):
 
     def get_queryset(self):
         customer_id = self.request.GET.get('customer')
-        queryset = Order.objects.prefetch_related('line_items').filter(customer_id=customer_id)
+        queryset = LineItem.objects.filter(order__customer_id=customer_id)
         return queryset

@@ -87,7 +87,7 @@
                                 <div class="uk-grid-16" uk-grid>
                                     <div class="uk-width-auto">
                                         <div class="uk-cover-container">
-                                            <img src="https://cdn.shopify.com/s/files/1/0511/1939/0871/products/3a374f9d12791eab25ecc038de25a6c8_4071e87a-24d8-4b1d-b6ac-9365ed183281.jpg?v=1624335068"
+                                            <img src="{{ item.images }}"
                                                  alt="" uk-cover>
                                             <canvas width="40" height="40"></canvas>
                                         </div>
@@ -122,7 +122,7 @@
                                                     <div class="admin__box2__item dropdown">
                                                         <div class="uk-inline">
                                                             <button class="admin__box2__btn uk-button uk-button-default uk-position-relative"
-                                                                    type="button">
+                                                                    type="button" style="width: 110px">
                                                                 <span id="status_{{ item.line_item_id }}">
                                                                     {% if item.status == "try-on" %}
                                                                         未発送
