@@ -76,7 +76,7 @@ def finalize(request):
         return redirect(reverse(login))
     messages.info(request, "Logged in to shopify store.")
     request.session.pop('return_to', None)
-    return redirect(request.session.get('return_to', reverse('root_path')))
+    return redirect(request.session.get('return_to', reverse('orders')))
 
 
 def logout(request):

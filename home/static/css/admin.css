@@ -558,7 +558,7 @@ body {
   line-height: 1.1;
 }
 .uk-active > .admin__box1__tag {
-  background-color: #c4cdd5;
+  /*background-color: #c4cdd5;*/
 }
 .pending > .admin__box1__tag {
   background-color: #ffea8a;
@@ -808,3 +808,13 @@ body {
   width: 36px !important;
 }
 /*# sourceMappingURL=admin.css.map */
+
+
+.admin__box2__item {
+  width: calc(100%/3);
+}
+
+form.uk-width-medium {
+  width: unset;
+
+}

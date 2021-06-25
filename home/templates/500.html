@@ -1,26 +1,138 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
-</head>
+{% assign orderedItems = "" %}
+{% for order in customer.orders %}
+    {% for item in order.line_items %}
+        {% if item.properties['status'] == "purchased" %}
+            {% assign orderedItems = orderedItems | append : item.product.id %}
+            {% assign orderedItems = orderedItems | append : item.variant.option1 %}
+            {% assign orderedItems = orderedItems | append : ',' %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
 
-<body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
-  </div>
-</body>
-</html>
+{% assign purchasedItems = orderedItems | split: ',' %}
+
+{% for order in customer.orders %}
+    {% if order.cancelled == false %}
+        {% for item in order.line_items %}
+
+            {% if item.properties['status'] == "try-on" or item.variant.option2 == "試着用" %}
+                {% assign tryOnItemData = "" %}
+                {% assign tryOnItemData = tryOnItemData | append : item.product.id %}
+                {% assign tryOnItemData = tryOnItemData | append : item.variant.option1 %}
+                {% assign next = purchasedItems | where: tryOnItemData %}
+                {% if next.size > 0 %}
+                    {% break %}
+                {% endif %}
+            {% endif %}
+
+            {% if item.properties['status'] != "returned" and item.properties['status'] == "try-on" or item.variant.option2 == "試着用" %}
+            <tr>
+                <td>
+                    {% for variant in item.product.variants %}
+                        {% if variant.option1 == item.variant.option1 and variant.option2 != item.variant.option2 %}
+                            {% - assign purchaseItemId = variant.id %}
+                            {% - assign purchaseItemPrice = variant.price %}
+                            {% break %}
+                        {% else %}
+                            {% - assign purchaseItemId = item.variant_id %}
+                            {% - assign purchaseItemPrice = item.variant.price %}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="uk-grid-8 uk-grid-16-m uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <input name="product-check"
+                                   class="uk-checkbox page1__contentRight__table__check uk-display-inline-block"
+                                   type="checkbox"
+                                   data-varian_id="{{ purchaseItemId }}"
+                                   data-product_id="{{ item.product.id }}"
+                                   data-product_title="{{ item.product.title | escape }}"
+                                   data-product_url="{{ item.product.url }}"
+                                   data-product_image="{{ item.product | img_url }}"
+                                   onclick="enableCheckout()"
+                            />
+                        </div>
+                        <div class="uk-width-expand">
+                            <div class="uk-flex-middle uk-grid-8 uk-grid-16-m" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-cover-container">
+                                        <img src="{{ item.product | img_url }}" uk-cover/>
+                                        <canvas class="uk-visible@s" width="40" height="40"></canvas>
+                                        <canvas class="uk-hidden@s" width="60" height="60"></canvas>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="page1__contentRight__table__txt2">{{ item.product.title | escape }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+                <td>
+                    {{ item.variant.option1 }}
+                </td>
+                <td>
+                    {{ order.created_at | date: "%Y/%m/%d" }}
+                </td>
+                <td>
+                    {{ purchaseItemPrice | money }}
+                </td>
+                <td>
+                    {% if order.cancelled == true %}
+                    キャンセル注文
+                    {% - else - %}
+                    {% if item.properties['status'] == "try-on" %}
+                    試着中
+                    {% - elsif item.properties['status'] == "returned" - %}
+                    返却済み
+                    {% - endif - %}
+                    {% - endif - %}
+                </td>
+            </tr>
+            {% elsif item.properties['status'] == "returned" or item.variant.option2 == "購入用" %}
+            <tr>
+            <td>
+                <div class="uk-grid-8 uk-grid-16-m uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                    </div>
+                    <div class="uk-width-expand">
+                        <div class="uk-flex-middle uk-grid-8 uk-grid-16-m" uk-grid>
+                            <div class="uk-width-auto">
+                                <div class="uk-cover-container">
+                                    <img src="{{ item.product | img_url }}" uk-cover/>
+                                    <canvas class="uk-visible@s" width="40" height="40"></canvas>
+                                    <canvas class="uk-hidden@s" width="60" height="60"></canvas>
+                                </div>
+                            </div>
+                            <div class="uk-width-expand">
+                                <div class="page1__contentRight__table__txt2">{{ item.product.title | escape }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </td>
+            <td>
+                {{ item.variant.option1 }}
+            </td>
+            <td>
+                {{ order.created_at | date: "%Y/%m/%d" }}
+            </td>
+            <td>
+                {{ item.variant.price | money }}
+            </td>
+            <td>
+                {% if order.cancelled == true %}
+                キャンセル注文
+                {% - else - %}
+                {% if item.properties['status'] == "purchased" %}
+                    購入済み
+                    {% - elsif item.properties['status'] == "returned" - %}
+                    返却済み
+                    {% - endif - %}
+                    {% - endif - %}
+                    </td>
+                {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
